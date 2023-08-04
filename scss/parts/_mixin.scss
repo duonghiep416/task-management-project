@@ -101,7 +101,7 @@
     }
 }
 
-@mixin circle($width, $height: $width, $bgc) {
+@mixin circle($width, $height: $width, $bgc: transparent) {
     display: inline-block;
     width: $width;
     height: $height;

@@ -2,6 +2,10 @@
     padding: 20px 0;
     position: sticky;
     top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    background: #131517;
     .container {
         display: flex;
         align-items: center;
@@ -201,9 +205,7 @@
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {
-    .header {
-        .container {
-            max-width: 1144px;
-        }
+    .container {
+        max-width: 1144px;
     }
 }
