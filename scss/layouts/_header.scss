@@ -1,0 +1,209 @@
+.header {
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .sign-in-btn {
+        margin-right: 44px;
+        @include button(80px, 30px, #36383e);
+        font-size: 1.2rem;
+        font-weight: 400;
+        background: linear-gradient(90deg, #eb9204 1.67%, #83e868 89.99%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .menu {
+        align-self: flex-start;
+        margin-top: 3px;
+        cursor: pointer;
+    }
+    .overlay {
+        display: inline-block;
+        inset: 0;
+        position: fixed;
+        background-color: #31303096;
+        opacity: 0;
+        visibility: hidden;
+        transition-property: opacity, visibility;
+        transition: 0.2s ease;
+    }
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 70vw;
+        background-color: #131517;
+        padding: 30px 20px;
+        transform: translateX(-100%);
+        transition: transform 0.2s linear;
+        .nav-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 50px;
+            .nav-item {
+                @include flexCenter($justify: flex-start);
+                width: 100%;
+                height: 50px;
+                border-radius: 10px;
+                padding-left: 10px;
+                @include flexCenter($justify: flex-start);
+                transition: background-color 0.3s ease;
+                .nav-icon {
+                    width: 30px;
+                    font-size: 20px;
+                    color: #858b93;
+                }
+
+                &:hover {
+                    background-color: #313334;
+
+                    .nav-icon {
+                        color: #f9f9f9;
+                    }
+
+                    a {
+                        color: #f9f9f9;
+                    }
+                }
+            }
+        }
+        .logo-link {
+            margin-bottom: 50px;
+
+            img {
+                width: 100px;
+            }
+        }
+    }
+
+    #menu-navbar:checked ~ .container .navbar {
+        transform: translateX(0);
+    }
+
+    #menu-navbar:checked ~ .container .overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .header {
+        .sign-in-btn {
+            @include button(110px, 40px, #36383e);
+            min-width: 110px;
+            @include font(title, h6);
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .header {
+        label[for="menu-navbar"] {
+            display: none;
+        }
+
+        .sign-in-btn {
+            margin-right: 0;
+            order: 1;
+        }
+
+        .navbar {
+            position: static;
+            transform: translateX(0);
+            .logo {
+                display: none;
+            }
+
+            .nav-list {
+                flex-direction: row;
+                justify-content: center;
+                gap: 0;
+                margin-top: 0;
+                .nav-item {
+                    height: auto;
+                    width: auto;
+                    border-radius: 0;
+                    padding-left: 0;
+                    position: relative;
+                    .nav-link {
+                        padding: 5px 18px;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        background-color: #6aea5c;
+                        height: 2px;
+                        bottom: 0;
+                        right: 100%;
+                        left: 18px;
+                        transition: right 0.5s ease;
+                    }
+
+                    &:hover {
+                        background-color: transparent;
+                    }
+
+                    &:hover::after {
+                        right: 18px;
+                    }
+                }
+
+                .nav-item.active {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        background-color: #6aea5c;
+                        height: 2px;
+                        bottom: 0;
+                        right: 18px;
+                        left: 18px;
+                        transition: right 0.5s ease;
+                    }
+                    .nav-link {
+                        color: #f9f9f9;
+                    }
+                }
+            }
+
+            .nav-icon {
+                display: none;
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .header {
+        .navbar {
+            padding: 0;
+        }
+    }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+    .header {
+        .container {
+            max-width: 1144px;
+        }
+    }
+}

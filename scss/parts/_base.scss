@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap");
+
+html {
+    font-size: 10px;
+}
+body {
+    font-size: 1.6rem;
+    font-family: "Sora", sans-serif;
+    background: #131517;
+}
+
+input,
+select,
+textarea,
+button {
+    font-family: "Sora", sans-serif;
+}
+
+a {
+    color: #858b93;
+    text-decoration: none;
+}
+
+@keyframes button-active {
+    from {
+        right: 100%;
+    }
+    to {
+        right: 0%;
+    }
+}
+
+@keyframes button-unactive {
+    from {
+        right: 0%;
+    }
+    to {
+        right: 100%;
+    }
+}

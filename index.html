@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- Link FontAwesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- Link CSS -->
+        <link rel="stylesheet" href="./css/grid.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <input type="checkbox" id="menu-navbar" hidden />
+            <div class="container">
+                <div class="logo">
+                    <a href="#!" class="logo-link">
+                        <img src="./image/logo.svg" alt="" />
+                    </a>
+                </div>
+                <a href="#!" class="sign-in-btn btn">Sign In</a>
+                <label for="menu-navbar" class="menu">
+                    <img src="./image/menu-icon.svg" alt="Menu" />
+                </label>
+                <label for="menu-navbar">
+                    <span class="overlay"></span>
+                </label>
+                <nav class="navbar">
+                    <div class="logo">
+                        <a href="#!" class="logo-link">
+                            <img src="./image/logo.svg" alt="" />
+                        </a>
+                    </div>
+                    <ul class="nav-list">
+                        <li class="nav-item active">
+                            <i class="fa-solid fa-house nav-icon"></i>
+                            <a href="#!" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <i class="fa-solid fa-shop nav-icon"></i>
+                            <a href="#!" class="nav-link">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <i
+                                class="fa-solid fa-book-open-reader nav-icon"
+                            ></i>
+                            <a href="#!" class="nav-link">Guidelines</a>
+                        </li>
+                        <li class="nav-item">
+                            <i class="fa-regular fa-thumbs-up nav-icon"></i>
+                            <a href="#!" class="nav-link">Review</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="hero">
+                <div class="container">
+                    <img
+                        src="./image/hero/hero-1.svg"
+                        alt="hero"
+                        class="hero-decor-1"
+                    />
+                    <h1 class="hero-slogan">
+                        Make
+                        <span class="highlight-text">
+                            Management<span
+                                class="highlight-text-decor-1"
+                            ></span
+                            ><span class="highlight-text-decor-2"></span
+                            ><span class="highlight-text-decor-3"></span
+                            ><span class="highlight-text-decor-4"></span
+                        ></span>
+                        Way More Easier Than Ever
+                        <img
+                            src="./image/hero/hero-2.svg"
+                            alt="hero"
+                            class="hero-decor-2"
+                        />
+                    </h1>
+                    <p class="hero-desc">
+                        The online collaborative management platform to bring
+                        more efficiency and performace
+                    </p>
+                    <div class="hero-action">
+                        <a href="#!" class="request-btn btn button-active"
+                            >Request Demo</a
+                        >
+                        <a href="#!" class="contact-btn btn">Contact Us</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
