@@ -1,4 +1,4 @@
-@mixin font($type, $tag, $style: normal) {
+@mixin font($type, $tag: none, $style: normal) {
     @if $type == title {
         @if $tag == h1 {
             font-size: 6rem;

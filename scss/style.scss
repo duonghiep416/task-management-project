@@ -1,4 +1,9 @@
 // Base
+:root {
+    --dashboard-bgc: #1f2326;
+    --dashboard-content-bgc: #0d1012;
+    --white-text: #f9f9f9;
+}
 @import "parts/variables";
 @import "parts/reset";
 @import "parts/base";
